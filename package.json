@@ -18,6 +18,7 @@
 	"engines": { "node": " >= 0.4.1 < 0.5.0" },
 	"dependencies": {
 		"eyes": "0.1.6",
-		"7digital-api": "0.1.0"
+		"7digital-api": "0.1.0",
+		"connect": "1.6.0"
 	}
 }

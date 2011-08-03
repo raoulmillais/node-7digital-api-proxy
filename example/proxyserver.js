@@ -3,5 +3,5 @@ var connect = require('connect'),
 	proxy = require('../lib/apiproxy');
 
 connect(
-	proxy(api, '')
+	proxy()
 ).listen(3000);

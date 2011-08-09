@@ -19,6 +19,7 @@
 	"dependencies": {
 		"eyes": "0.1.6",
 		"7digital-api": "0.1.1",
-		"connect": "1.6.0"
+		"connect": "1.6.0",
+		"winston": "0.3.5"
 	}
 }

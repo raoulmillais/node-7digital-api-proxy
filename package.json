@@ -19,7 +19,8 @@
 	"dependencies": {
 		"winston": "0.3.5",
 		"eyes": "0.1.6",
-		"7digital-api": ">=0.2.1",
-		"connect": "1.6.0"
+		"7digital-api": "0.1.1",
+		"connect": "1.6.0",
+		"winston": "0.3.5"
 	}
 }

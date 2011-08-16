@@ -2,3 +2,4 @@
 /build/
 *.swp
 .monitor
+npm-debug.log

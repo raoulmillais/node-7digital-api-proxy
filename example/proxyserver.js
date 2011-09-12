@@ -3,5 +3,7 @@ var connect = require('connect'),
 	proxy = require('../lib/apiproxy');
 
 connect(
+	connect.cookieParser(),
+	connect.session({ secret: '7digital', cookie: { maxAge: 60000 }}),
 	proxy()
 ).listen(3000);

@@ -3,3 +3,4 @@
 *.swp
 .monitor
 npm-debug.log
+/docs/

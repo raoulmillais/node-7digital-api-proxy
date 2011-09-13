@@ -3,6 +3,11 @@ SHELL = bash
 test: check
 	jessie spec/
 
-check:
-	readyjs readyjs.conf.js
+check: docs
+	jshint lib/*.js examples/*.js
+
+docs:
+	docco {lib,examples}/*.js
+
+.PHONY: test check docs
 

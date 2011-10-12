@@ -64,4 +64,18 @@ describe('when matching', function() {
 		result = matcher.match({ pathname: '/api/artist/fail' });
 		expect(result).not.toBeDefined();
 	});
+
+	it('should return undefined when route matches (omitted prefix)', 
+		function() {
+		var result;
+
+		options = {
+			pathprefix: 'api',
+			logger: new winston.Logger({ transports: [] }),
+			schema: require('7digital-api')
+		};
+		matcher = new RouteMatcher(options);
+		result = matcher.match({ pathname: '/artist/details' });
+		expect(result).not.toBeDefined();
+	});
 });

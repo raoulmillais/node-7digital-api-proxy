@@ -65,7 +65,7 @@ describe('when matching', function() {
 		expect(result).not.toBeDefined();
 	});
 
-	it('should return undefined when route matches (omitted prefix)', 
+	it('should return undefined when route matches (omitted prefix)',
 		function() {
 		var result;
 
@@ -77,5 +77,34 @@ describe('when matching', function() {
 		matcher = new RouteMatcher(options);
 		result = matcher.match({ pathname: '/artist/details' });
 		expect(result).not.toBeDefined();
+	});
+
+	it('should return ignore case when matching route', function() {
+		var result;
+
+		options = {
+			pathprefix: '',
+			logger: new winston.Logger({ transports: [] }),
+			schema: require('7digital-api')
+		};
+		matcher = new RouteMatcher(options);
+		result = matcher.match({ pathname: '/arTist/deTAIls' });
+		expect(result).toBeDefined();
+		expect(result.resourceClassName).toEqual('Artists');
+		expect(result.apiMethodName).toEqual('getDetails');
+	});
+
+	it('should normalise case of slugs when matching route', function() {
+		var result;
+
+		options = {
+			pathprefix: '',
+			logger: new winston.Logger({ transports: [] }),
+			schema: require('7digital-api')
+		};
+		matcher = new RouteMatcher(options);
+		result = matcher.match({ pathname: '/arTist/deTAIls' });
+		expect(result.resource).toEqual('artist');
+		expect(result.action).toEqual('details');
 	});
 });

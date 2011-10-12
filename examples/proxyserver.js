@@ -1,6 +1,6 @@
 var connect = require('connect'),
 	api = require('7digital-api'),
-	proxy = require('../lib/apiproxy');
+	proxy = require('../index');
 
 connect(
 	connect.cookieParser(),

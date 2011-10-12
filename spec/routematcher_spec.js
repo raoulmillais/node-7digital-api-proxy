@@ -39,5 +39,17 @@ describe('when matching', function() {
 		expect(result.apiMethodName).toEqual('getDetails');
 	});
 
+	it('should return undefined when no resolved route', function() {
+		var result;
+
+		options = {
+			pathprefix: 'api',
+			logger: new winston.Logger({ transports: [] }),
+			schema: require('7digital-api')
+		};
+		matcher = new RouteMatcher(options);
+		result = matcher.match({ pathname: '/api/artist/fail' });
+		expect(result).not.toBeDefined();
+	});
 
 });

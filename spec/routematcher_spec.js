@@ -39,7 +39,20 @@ describe('when matching', function() {
 		expect(result.apiMethodName).toEqual('getDetails');
 	});
 
-	it('should return undefined when no resolved route', function() {
+	it('should return undefined when no resolved route (no prefix)', function() {
+		var result;
+
+		options = {
+			pathprefix: '',
+			logger: new winston.Logger({ transports: [] }),
+			schema: require('7digital-api')
+		};
+		matcher = new RouteMatcher(options);
+		result = matcher.match({ pathname: '/api/artist/fail' });
+		expect(result).not.toBeDefined();
+	});
+
+	it('should return undefined when no resolved route (prefix)', function() {
 		var result;
 
 		options = {
@@ -51,5 +64,4 @@ describe('when matching', function() {
 		result = matcher.match({ pathname: '/api/artist/fail' });
 		expect(result).not.toBeDefined();
 	});
-
 });

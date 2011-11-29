@@ -13,6 +13,7 @@ describe('custom callback', function () {
 					expect(this.actionSlug).toEqual('details');
 					expect(this.apiCall).toEqual('artist/details');
 					expect(this.resourceSlug).toEqual('artist');
+					expect(data.artist).toBeDefined();
 					callBackDone = true;
 				}
 			});

@@ -19,6 +19,7 @@
 	"scripts": {
 		"test": "jessie -f nested spec/"
 	},
+	"main": "index.js",
 	"dependencies": {
 		"winston": "0.3.5",
 		"eyes": "0.1.6",

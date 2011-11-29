@@ -16,6 +16,9 @@
 		"MIT"
 	],
 	"engines": { "node": " >= 0.4.1" },
+	"scripts": {
+		"test": "jessie -f nested spec/"
+	},
 	"dependencies": {
 		"winston": "0.3.5",
 		"eyes": "0.1.6",
@@ -23,5 +26,10 @@
 		"connect": "1.8.x",
 		"winston": "0.3.5",
 		"underscore": "1.1.7"
+	},
+	"devDependencies": {
+		"docco": "0.3.0",
+		"jessie": "git://github.com/rodzyn/jessie.git",
+		"jshint": "0.3.0"
 	}
 }

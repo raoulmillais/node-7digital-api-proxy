@@ -17,7 +17,7 @@
 	],
 	"engines": { "node": " >= 0.4.1" },
 	"scripts": {
-		"test": "jessie -f nested spec/"
+		"test": "jessie -f nested spec/ && ./node_modules/.bin/cucumber.js"
 	},
 	"main": "index.js",
 	"dependencies": {

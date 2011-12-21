@@ -30,6 +30,8 @@
 	},
 	"devDependencies": {
 		"docco": "0.3.0",
+		"cucumber": "latest",
+		"request": "2.2.9",
 		"jessie": "git://github.com/rodzyn/jessie.git",
 		"jshint": "0.3.0"
 	}
